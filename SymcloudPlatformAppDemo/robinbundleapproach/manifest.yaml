@@ -1,0 +1,10 @@
+name: testbundle                        # Name of the bundle
+version: "5.0"                          # Version of the bundle
+description: Yogesh Test bundle         # Small description about bundle/app
+roles: [webserver]                      # All the roles/services the application requires
+webserver:                              # Section to define the role
+  name: vote                            # Name of the role
+  image:                                # Image section
+    name: yogeshraheja/devopsinaction   # name of the image 
+    version: v2                         # tag/version of the image
+    engine: docker                      # Name of engine
