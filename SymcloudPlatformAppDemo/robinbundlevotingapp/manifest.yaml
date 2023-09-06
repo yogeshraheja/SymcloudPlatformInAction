@@ -1,0 +1,45 @@
+name: votingapp
+version: "1.0"
+icon: Thinknyx.png
+description: Voting App bundle
+#roles: [vote, redis, db, worker, result]
+roles: [vote, result]
+vote:
+   name: vote
+   image:
+       name: yogeshraheja/thinknyxvote
+       version: v2
+       engine: docker
+   env:
+     POD_NAME: vote
+   services:
+   - type: NodePort
+     annotations:
+       role: vote
+     scope: pod
+     ports:
+     - port: 80
+       protocol: TCP
+       name: vote
+       node_port: 30020
+       target_port: 80
+result:
+   name: result
+   env:
+     POD_NAME: result
+   image:
+       name: yogeshraheja/thinknyxresult
+       version: v2
+       engine: docker
+   services:
+   - type: NodePort
+     annotations:
+       role: db
+     scope: pod
+     ports:
+     - port: 80
+       protocol: TCP
+       name: redis
+       target_port: 80
+       node_port: 30021
+
