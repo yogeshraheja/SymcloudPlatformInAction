@@ -4,28 +4,28 @@ Creation of Robin Bundle:
 Step1:
 =====
 
-# mkdir /var/tmp/thinknyxappbundle
-# cd /var/tmp/thinknyxappbundle
-# mkdir scripts icons sources
-# touch manifest.yaml (check the manifest file in the repository)
-# ls -lrt
+mkdir /var/tmp/thinknyxappbundle
+cd /var/tmp/thinknyxappbundle
+mkdir scripts icons sources
+touch manifest.yaml (check the manifest file in the repository)
+ls -lrt
 
 Step2:
 ======
 
-# Create a tar file of these files & directories "cd /var/tmp/thinknyxappbundle && tar -cvzf thinknyxappbundle.tar.gz *"
+Create a tar file of these files & directories "cd /var/tmp/thinknyxappbundle && tar -cvzf thinknyxappbundle.tar.gz *"
 
 Step3:
 =====
 
-# Upload and List your robin bundle
+Upload and List your robin bundle
 
-# robin bundle add thinknyxappbundle 1.0.0 thinknyxappbundle.tar.gz
-# robin bundle list
+robin bundle add thinknyxappbundle 1.0.0 thinknyxappbundle.tar.gz
+robin bundle list
 
 Step4:
 ======
 
-# Deploy your application using CLI or GUI
+Deploy your application using CLI or GUI
 
-# Go to GUI, click on applications --> bundle --> deploy
+Go to GUI, click on applications --> bundle --> deploy
