@@ -1,0 +1,20 @@
+name: newbundle                         # Name of the bundle
+version: "1.0"                          # Version of the bundle
+icon: Thinknyx.png
+description: Yogesh Test bundle         # Small description about bundle/app
+roles: [webserver]                      # All the roles/services the application requires
+webserver:                              # Section to define the role
+  name: vote                            # Name of the role
+  image:                                # Image section
+    name: yogeshraheja/devopsinaction   # name of the image 
+    version: v2                         # tag/version of the image
+    engine: docker                      # Name of engine
+  services:                             # Service section 
+  - type: NodePort                      # Service Type
+    scope: pod                          # Scope of service
+    ports:                              # Port details
+    - port: 80                          # Service Port
+      protocol: TCP                     # Protocol
+      name: web                         # service name
+      node_port: 31111                  # Node Port number
+      target_port: 80                   # Pod Port Number
