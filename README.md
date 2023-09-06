@@ -15,4 +15,12 @@ Go to SymcloudPlatformAppDemo/kubectlapproach, all instructions and commands are
 
 # Example3.1 - SymcloudPlatformAppDemo (Helm Charts to deploy application on Symcloud Platform)
 
-Go to SymcloudPlatformAppDemo/helmapproach, all instructions and commands are provided to deploy a sample application on K8s cluster with native kubectl command inside README file 
+Go to SymcloudPlatformAppDemo/helmapproach, all instructions and commands are provided to deploy a sample application on K8s cluster using Helm Charts
+
+# Example3.2 - SymcloudPlatformAppDemo (Robin Bundle to deploy application (only POD) on Symcloud Platform)
+
+Go to SymcloudPlatformAppDemo/robinbundleapproach, all instructions and commands are provided to build and deploy a sample application using Robin Bundles
+
+# Example3.3 - SymcloudPlatformAppDemo (Robin Bundle to deploy application (POD and Service) on Symcloud Platform)
+
+Go to SymcloudPlatformAppDemo/robinbundleexample2, all instructions and commands are provided to build and deploy a sample application using Robin Bundles
