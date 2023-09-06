@@ -10,7 +10,7 @@ mkdir scripts icons sources
 touch manifest.yaml (check the manifest file in the repository)
 ls -lrt
 
-Note: Thinknyx logo downloaded in icons directory from "https://commons.wikimedia.org/wiki/File:Thinknyx.png"
+Note: Thinknyx logo downloaded in icons directory from "https://upload.wikimedia.org/wikipedia/commons/e/e3/Thinknyx.png"
 
 Step2:
 ======
