@@ -9,7 +9,7 @@ Steps:
 
 - List the objects in thinknyxns namespace "kubectl get all -n thinknyxns"
 
-- Expose your application by creating a service "kubectl expose deployment conftestdep --port=80 --protocol=TCP --target-port=80 --name=conftestdepsvc --type=NodePort -n thinknyxns"
+- Expose your application by creating a service "kubectl expose deployment thinknyxdep --port=80 --protocol=TCP --target-port=80 --name=thinknyxdepsvc --type=NodePort -n thinknyxns"
 
 - List the objects in thinknyxns namespace "kubectl get all -n thinknyxns"
 
