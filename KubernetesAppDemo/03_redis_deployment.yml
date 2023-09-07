@@ -16,7 +16,7 @@ spec:
         app: redis
     spec:
       containers:
-      - image: yogeshraheja/thinknyxredis:v1
+      - image: redis:7.2
         name: redis
         ports:
         - containerPort: 6379

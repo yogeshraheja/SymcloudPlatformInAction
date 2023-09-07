@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: db
+  name: db
+  namespace: symcloudinaction
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+      - image: postgres:13.4
+        name: postgres
+        ports:
+        - containerPort: 5432
+          name: postgres
+        env:
+        - name: POSTGRES_PASSWORD
+          valueFrom: 
+            secretKeyRef:
+              key: DB_PWD
+              name: db-password
+        volumeMounts:
+        - name: postgres
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: postgres
+        persistentVolumeClaim:
+          claimName: database

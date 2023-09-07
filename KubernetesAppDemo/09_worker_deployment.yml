@@ -16,6 +16,15 @@ spec:
         app: worker
     spec:
       containers:
-      - image: yogeshraheja/thinknyxworker:v1
+      - image: kulbhushanmayer/voting_app:worker_1.0
         name: worker
+        envFrom:
+        - configMapRef:
+            name: db-details
+        - secretRef:
+            name: db-password
+        resources:
+          limits:
+            memory: 500Mi
+            cpu: 250m
 

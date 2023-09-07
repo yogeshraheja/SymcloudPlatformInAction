@@ -16,9 +16,18 @@ spec:
         app: result
     spec:
       containers:
-      - image: yogeshraheja/thinknyxresult:v2
+      - image: kulbhushanmayer/thinknyx_voting_app:result_1.0
         name: result
+        command:
+        - sh
+        - -c
+        - "node server.js"
         ports:
         - containerPort: 80
           name: result
+        envFrom:
+        - configMapRef:
+            name: db-details
+        - secretRef:
+            name: db-password
 

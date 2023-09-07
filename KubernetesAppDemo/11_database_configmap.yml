@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-details
+  namespace: symcloudinaction
+data:
+  REDIS_HOST: redis.symcloudinaction.svc.thinknyx-conference.com
+  DB_URL: postgres.symcloudinaction.svc.thinknyx-conference.com
+  DB_USER: postgres
+  DB_NAME: postgres
+

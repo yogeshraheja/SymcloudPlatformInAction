@@ -16,9 +16,20 @@ spec:
         app: vote
     spec:
       containers:
-      - image: yogeshraheja/thinknyxvote:v2
+      - image: kulbhushanmayer/thinknyx_voting_app:1.0
         name: vote
+        command:
+        - sh
+        - -c
+        - "gunicorn app:app -b 0.0.0.0:80 --log-file - --access-logfile - --workers 4 --keep-alive 0"
         ports:
         - containerPort: 80
           name: vote
-
+        envFrom:
+        - configMapRef:
+            name: db-details
+        resources:
+          limits:
+            memory: 250Mi
+            cpu: 250m
+        
