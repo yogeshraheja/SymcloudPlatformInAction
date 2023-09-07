@@ -25,6 +25,6 @@ Go to SymcloudPlatformAppDemo/robinbundleapproach, all instructions and commands
 
 Go to SymcloudPlatformAppDemo/robinbundleexample2, all instructions and commands are provided to build and deploy a sample application using Robin Bundles
 
-# Example3.3 - SymcloudPlatformAppDemo (Robin Bundle to deploy Voting application on Symcloud Platform)
+# Example3.4 - SymcloudPlatformAppDemo (Robin Bundle to deploy Voting application on Symcloud Platform)
 
 Go to SymcloudPlatformAppDemo/robinbundlevotingapp, all instructions and commands are provided to build and deploy voting application using Robin Bundles
